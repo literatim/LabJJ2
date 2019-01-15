@@ -1,7 +1,29 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Add";
 }
 
-<h2>Add</h2>
+@model LabJJ2.Models.Product
 
+<h2>Add Products</h2>
+
+@using (Html.BeginForm("Post", "Products", FormMethod.Post))
+{
+    <body class="btn-group-justified">
+    <div class="form-group, text-primary">
+        @Html.LabelFor(x => x.Name)
+        @Html.TextBoxFor(x => x.Name)
+    </div>
+
+    <div class="form-group, text-primary">
+        @Html.LabelFor(x => x.Description)
+        @Html.TextBoxFor(x => x.Description)
+    </div>
+
+    <div class="form-group, text-primary">
+        @Html.LabelFor(x => x.Price)
+        @Html.TextBoxFor(x => x.Price)
+    </div>
+
+    <button type="submit" class="btn-success, text-success">Submit</button>
+    </body>
+}

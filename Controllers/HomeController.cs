@@ -26,12 +26,5 @@ namespace LabJJ2.Controllers
 
             return View();
         }
-
-        public ActionResult Products()
-        {
-            ViewBag.Message = "Add products here.";
-
-            return View();
-        }
     }
 }
